@@ -10,8 +10,7 @@ import {
   ImageBackground
 } from 'react-native';
 
-import DefaultMarker from './DefaultMarker';
-import DefaultLabel from './DefaultLabel';
+import DefaultMarker from './DefaultMarker'
 import { createArray, valueToPosition, positionToValue } from './converters';
 
 export default class MultiSlider extends React.Component {
@@ -33,7 +32,6 @@ export default class MultiSlider extends React.Component {
     customMarker: DefaultMarker,
     customMarkerLeft: DefaultMarker,
     customMarkerRight: DefaultMarker,
-    customLabel: DefaultLabel,
     markerOffsetX: 0,
     markerOffsetY: 0,
     sliderLength: 280,
@@ -370,8 +368,6 @@ export default class MultiSlider extends React.Component {
     const MarkerRight = this.props.customMarkerRight;
     const isMarkersSeparated = this.props.isMarkersSeparated || false;
 
-    const Label = this.props.customLabel;
-
     const {
       slipDisplacement,
       height,
@@ -512,7 +508,7 @@ export default class MultiSlider extends React.Component {
     const leftDiff = (Dimensions.get('window').width - this.props.sliderLength) / 2;
     return (
       <View>
-        {this.props.imageBackgroundSource && 
+        {this.props.imageBackgroundSource &&
           <ImageBackground source={this.props.imageBackgroundSource} style={[{width: '100%', height: '100%'}, containerStyle]}>
             {body}
           </ImageBackground>
