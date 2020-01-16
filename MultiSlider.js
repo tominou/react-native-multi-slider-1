@@ -85,7 +85,7 @@ export default class MultiSlider extends React.Component {
         onShouldBlockNativeResponder: (evt, gestureState) => true,
       });
     };
-    
+
     this._panResponderBetween = customPanResponder(
       (gestureState) => {
         this.startOne(gestureState);
@@ -512,13 +512,6 @@ export default class MultiSlider extends React.Component {
     const leftDiff = (Dimensions.get('window').width - this.props.sliderLength) / 2;
     return (
       <View>
-        <Label
-          leftDiff={leftDiff}
-          oneMarkerValue={this.state.valueOne}
-          twoMarkerValue={this.state.valueTwo}
-          oneMarkerLeftPosition={positionOne}
-          twoMarkerLeftPosition={positionTwo}
-        />
         {this.props.imageBackgroundSource && 
           <ImageBackground source={this.props.imageBackgroundSource} style={[{width: '100%', height: '100%'}, containerStyle]}>
             {body}
